@@ -22,15 +22,19 @@ jobs:
     #- uses: actions/checkout@v2
     
     - name: Merge branch
-      uses: devmasx/merge-branch@v1.3.0
+      #uses: devmasx/merge-branch@v1.3.0
+      uses: everlytic/branch-merge@1.0.2
       with:
-        type: now
-        label_name: "automerge to develop"
-        target_branch: "develop"
-        from_branch: "master"
-        # Github token
-        # Alias head_to_merge input
-        github_token: ${{ secrets.TOKEN }}
+          github_token: ${{ secrets.TOKEN }}
+          source_ref: "master"
+          target_branch: "develop"
+#         type: now
+#         label_name: "automerge to develop"
+#         target_branch: "develop"
+#         from_branch: "master"
+#         # Github token
+#         # Alias head_to_merge input
+#         github_token: ${{ secrets.TOKEN }}
 
 #     # Runs a single command using the runners shell
 #     - name: Run a one-line script
