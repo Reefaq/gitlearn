@@ -19,11 +19,12 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-#     - uses: actions/checkout@v2
+    - uses: actions/checkout@v2
     
     - name: Merge branch
       uses: devmasx/merge-branch@v1.3.0
       with:
+        type: now
         label_name: "automerge to develop"
         target_branch: "develop"
         from_branch: "master"
