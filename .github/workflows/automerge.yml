@@ -30,7 +30,7 @@ jobs:
         from_branch: "master"
         # Github token
         # Alias head_to_merge input
-        github_token: "1eeb6144bfca92b4a054a4d4748591a8b6e9b946"
+        github_token: ${{ secrets.TOKEN }}
 
 #     # Runs a single command using the runners shell
 #     - name: Run a one-line script
