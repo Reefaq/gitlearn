@@ -24,7 +24,6 @@ jobs:
     - name: Merge branch
       uses: devmasx/merge-branch@v1.3.0
       with:
-        type: "automerge"
         label_name: "automerge to develop"
         target_branch: "develop"
         from_branch: "master"
